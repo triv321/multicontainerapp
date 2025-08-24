@@ -60,7 +60,7 @@ The application consists of two services running in isolated containers on a sha
 ## **Quickstart**
 
 1. **Clone the repository:**  
-   git clone https://github.com/triv321/multi-container-docker_app.git  
+   git clone https://github.com/triv321/multi-container-docker_app
    cd multi-container-docker_app
 
 2. Launch the application:  
