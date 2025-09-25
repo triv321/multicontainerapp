@@ -1,6 +1,6 @@
 # **Project: Multi-Container Application with a Persistent Database**
 
-A multi-container web application featuring a Python Flask API and a persistent PostgreSQL database, fully orchestrated with Docker Compose. This project demonstrates how to build and manage stateful applications using Docker Volumes.
+A multi-container web app using a Python Flask API and a persistent PostgreSQL database, orchestrated with Docker Compose to demonstrate stateful applications with Docker Volumes.
 
 ## **Table of Contents**
 
@@ -60,8 +60,8 @@ The application consists of two services running in isolated containers on a sha
 ## **Quickstart**
 
 1. **Clone the repository:**  
-   git clone https://github.com/triv321/multi-container-docker_app
-   cd multi-container-docker_app
+   git clone \[https://github.com/triv321/multicontainerapp\](https://github.com/triv321/multicontainerapp)  
+   cd multicontainerapp
 
 2. Launch the application:  
    This command will build the Flask application image, pull the PostgreSQL image, create the named volume, and start both containers. The \--build flag ensures the image is rebuilt if you've made changes.  
