@@ -28,30 +28,7 @@ This application simulates a simple visit tracker. A Python **Flask** applicatio
 ## **Architecture**
 
 The application consists of two services running in isolated containers on a shared virtual network. The PostgreSQL container's data directory is mounted to a persistent Docker Volume managed on the host.
-
-      \+-----------------------------+  
-      |      User's Web Browser     |  
-      \+-----------------------------+  
-                  |  
-                  | (HTTP Request on localhost:5000)  
-                  |  
-\+-----------------V----------------------------------------------------+  
-| Host Machine (Your Laptop)                                           |  
-|                                                                      |  
-|  \+-----------------------+         \+-------------------------------+  |  
-|  |   app (Flask API)     |         |   db (PostgreSQL)             |  |  
-|  |                       |--(Network Communication using hostname)--\>|  |  
-|  |  Container            |         |   Container                   |  |  
-|  \+-----------------------+         \+-------------------------------+  |  
-|                                                ^                       |  
-|                                                | (Data Persistence)    |  
-|                                                |                       |  
-|                                     \+--------------------------+       |  
-|                                     | Docker Managed Volume    |       |  
-|                                     |    (postgres\_data)       |       |  
-|                                     \+--------------------------+       |  
-\+----------------------------------------------------------------------+
-
+![alt text](image.png)
 ## **Prerequisites**
 
 * **Git:** To clone the project repository.  
