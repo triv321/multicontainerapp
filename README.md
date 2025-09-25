@@ -4,13 +4,13 @@ A multi-container web app using a Python Flask API and a persistent PostgreSQL d
 
 ## **Table of Contents**
 
-1. [Overview](https://www.google.com/search?q=%23overview)  
-2. [Core Features](https://www.google.com/search?q=%23core-features)  
-3. [Architecture](https://www.google.com/search?q=%23architecture)  
-4. [Prerequisites](https://www.google.com/search?q=%23prerequisites)  
-5. [Quickstart](https://www.google.com/search?q=%23quickstart)  
-6. [Project Details](https://www.google.com/search?q=%23project-details)  
-7. [Development](https://www.google.com/search?q=%23development)
+1. [Overview](#overview)  
+2. [Core Features](#core-features)  
+3. [Architecture](#architecture)  
+4. [Prerequisites](#prerequisites)  
+5. [Quickstart](#quickstart)  
+6. [Project Details](#project-details)  
+7. [Development](#development)
 
 ## **Overview**
 
@@ -60,7 +60,7 @@ The application consists of two services running in isolated containers on a sha
 ## **Quickstart**
 
 1. **Clone the repository:**  
-   git clone \[https://github.com/triv321/multicontainerapp\](https://github.com/triv321/multicontainerapp)  
+   git clone https://github.com/triv321/multicontainerapp  
    cd multicontainerapp
 
 2. Launch the application:  
