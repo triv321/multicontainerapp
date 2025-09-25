@@ -25,32 +25,31 @@ This application simulates a simple visit tracker. A Python **Flask** applicatio
 * **Declarative Orchestration:** The entire application stack, including services, networks, and volumes, is defined in a single docker-compose.yml file.  
 * **Environment Variable Configuration:** The application is configured using environment variables passed from Docker Compose, a best practice for separating configuration from code.
 
-## **Architecture**
-
+## Architecture
 The application consists of two services running in isolated containers on a shared virtual network. The PostgreSQL container's data directory is mounted to a persistent Docker Volume managed on the host.
 
-      \+-----------------------------+  
-      |      User's Web Browser     |  
-      \+-----------------------------+  
-                  |  
-                  | (HTTP Request on localhost:5000)  
-                  |  
-\+-----------------V----------------------------------------------------+  
-| Host Machine (Your Laptop)                                           |  
-|                                                                      |  
-|  \+-----------------------+         \+-------------------------------+  |  
-|  |   app (Flask API)     |         |   db (PostgreSQL)             |  |  
-|  |                       |--(Network Communication using hostname)--\>|  |  
-|  |  Container            |         |   Container                   |  |  
-|  \+-----------------------+         \+-------------------------------+  |  
-|                                                ^                       |  
-|                                                | (Data Persistence)    |  
-|                                                |                       |  
-|                                     \+--------------------------+       |  
-|                                     | Docker Managed Volume    |       |  
-|                                     |    (postgres\_data)       |       |  
-|                                     \+--------------------------+       |  
-\+----------------------------------------------------------------------+
+      +-----------------------------+
+      |      User's Web Browser     |
+      +-----------------------------+
+                  |
+                  | (HTTP Request on localhost:5000)
+                  |
++-----------------V----------------------------------------------------+
+| Host Machine (Your Laptop)                                           |
+|                                                                      |
+|  +-----------------------+         +-------------------------------+  |
+|  |   app (Flask API)     |         |   db (PostgreSQL)             |  |
+|  |                       |--(Network Communication using hostname)-->|  |
+|  |  Container            |         |   Container                   |  |
+|  +-----------------------+         +-------------------------------+  |
+|                                                ^                       |
+|                                                | (Data Persistence)    |
+|                                                |                       |
+|                                     +--------------------------+       |
+|                                     | Docker Managed Volume    |       |
+|                                     |    (postgres_data)       |       |
+|                                     +--------------------------+       |
++----------------------------------------------------------------------+
 
 ## **Prerequisites**
 
